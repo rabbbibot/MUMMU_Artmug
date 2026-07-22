@@ -1,6 +1,9 @@
 .main {
   animation: page-in 0.55s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-  will-change: opacity, transform;
+}
+
+body.page-leaving {
+  overflow: hidden;
 }
 
 body.page-leaving .main {

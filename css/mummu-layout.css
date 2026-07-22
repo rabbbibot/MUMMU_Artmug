@@ -1,7 +1,7 @@
 html {
   color-scheme: dark;
-  overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 @font-face {
@@ -115,7 +115,6 @@ body {
   margin-left: 220px;
   min-height: 100vh;
   padding: 2rem 2.5rem 4rem;
-  overflow-x: hidden;
 }
 
 .page-header {
@@ -365,31 +364,6 @@ body {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-}
-
-.btn-top {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s, background 0.2s, transform 0.2s;
-  z-index: 50;
-}
-
-.btn-top:hover {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 900px) {
