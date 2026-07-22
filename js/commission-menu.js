@@ -35,7 +35,7 @@ const NAV = [
 
 const PROFILE = {
   name: "",
-  logo: ""
+  logo: "images/mummu-icon.svg"
 };
 
 function currentPageId() {
@@ -46,7 +46,7 @@ function currentPageId() {
 
 function renderNav(current) {
   let html = '<div class="snb-profile"><div class="snb-profile-img">';
-  if (PROFILE.logo) html += `<img src="${PROFILE.logo}" alt="">`;
+  if (PROFILE.logo) html += `<img src="${PROFILE.logo}" alt="MUMMU">`;
   html += "</div>";
   if (PROFILE.name) html += `<span class="snb-profile-name">${PROFILE.name}</span>`;
   html += '</div><nav>';
