@@ -18,10 +18,16 @@ window.TIP_ITEMS = {
   ],
   "model-vtube": [
     {
-      title: "VTube Studio",
+      title: "",
       html: `
-        <p><a href="https://store.steampowered.com/app/1325860/VTube_Studio/" target="_blank" rel="noopener noreferrer">VTube Studio (Steam)</a></p>
-        <p>※ 수익창출이 가능한 용도로 사용(스트리밍 및 영상촬영)시 dlc 한 개 이상 구매 필수인 규정이 생겼습니다. 참고 부탁드립니다.</p>
+        <a class="tip-steam-card" href="https://store.steampowered.com/app/1325860/VTube_Studio/" target="_blank" rel="noopener noreferrer">
+          <span class="tip-steam" aria-hidden="true">
+            <img class="tip-steam-icon" src="images/steam.png?v=4" alt="" width="40" height="40" decoding="async">
+          </span>
+          <span class="tip-steam-card-body">
+            <span class="tip-note">※ 수익창출이 가능한 용도로 사용(스트리밍 및 영상촬영)시 dlc 한 개 이상 구매 필수인 규정이 생겼습니다. 참고 부탁드립니다.</span>
+          </span>
+        </a>
       `
     },
     {
@@ -37,7 +43,7 @@ window.TIP_ITEMS = {
     },
     {
       title: "모델 적용법",
-      youtubeId: "",
+      youtubeId: "_dapV9Iy1kQ",
       html: `
         <ul>
           <li>구글 드라이브 내 압축 파일을 압축 해제해주세요.</li>
@@ -78,7 +84,7 @@ window.TIP_ITEMS = {
     },
     {
       title: "웹캠",
-      youtubeId: "",
+      youtubeId: "_dapV9Iy1kQ",
       html: `
         <ol>
           <li>Vtube Studio 메뉴</li>
@@ -105,7 +111,7 @@ window.TIP_ITEMS = {
     },
     {
       title: "아이폰",
-      youtubeId: "",
+      youtubeId: "_dapV9Iy1kQ",
       html: `
         <p>PC 설정 후 아이폰 설정으로 넘어가주세요.</p>
         <p><strong>PC 설정</strong></p>

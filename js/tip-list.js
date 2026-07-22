@@ -10,10 +10,12 @@ function createTipItem(item, index) {
       : '<div class="video-wrap video-wrap--empty" aria-hidden="true"></div>'
     : "";
 
+  const title = item.title ? `<h3>${item.title}</h3>` : "";
+
   return `
     <article class="tip-row${showVideo ? "" : " tip-row--no-video"}">
       <div class="tip-body">
-        <h3>${item.title}</h3>
+        ${title}
         ${body}
       </div>
       ${video}

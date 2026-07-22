@@ -246,6 +246,15 @@ body {
   max-width: 1100px;
 }
 
+.main:has(.tip-list) .content-block.wide {
+  max-width: min(1480px, 100%);
+}
+
+.main:has(.tip-list) .tip-row .video-wrap {
+  margin-left: auto;
+  width: min(100%, 480px);
+}
+
 
 .intro-profile {
   display: flex;
@@ -524,8 +533,8 @@ body {
 
 .tip-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 1rem 2.25rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+  gap: 1rem 6rem;
   align-items: start;
   padding: 2rem 0;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
@@ -608,6 +617,82 @@ body {
   color: var(--main-text);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.tip-steam-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: min(1100px, 100%);
+  width: fit-content;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--main-border);
+  border-radius: 14px;
+  background: var(--main-card-bg);
+  color: inherit;
+  text-decoration: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tip-steam-card:hover {
+  background: #ebebeb;
+  border-color: rgba(0, 0, 0, 0.16);
+}
+
+.tip-steam {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+.tip-steam-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.tip-steam-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.tip-steam-card-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--main-text);
+  line-height: 1.35;
+}
+
+.tip-steam-card .tip-note {
+  margin: 0;
+  color: var(--main-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .tip-steam-card {
+    width: 100%;
+  }
+
+  .tip-steam-card .tip-note {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .tip-steam-card {
+    align-items: flex-start;
+  }
 }
 
 .tip-body code {
