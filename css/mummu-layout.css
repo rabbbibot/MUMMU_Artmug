@@ -5,12 +5,11 @@ html {
 }
 
 @font-face {
-  font-family: 'Mulmaru';
-  src: url('../fonts/Mulmaru.woff2') format('woff2'),
-       url('../fonts/Mulmaru.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Pretendard';
+  font-weight: 45 920;
   font-style: normal;
   font-display: optional;
+  src: url('../fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
 :root {
@@ -24,13 +23,20 @@ html {
   --border-subtle: rgba(255, 255, 255, 0.08);
   --card-bg: rgba(20, 20, 24, 0.7);
   --hover-bg: rgba(255, 255, 255, 0.05);
+  --main-bg: #ffffff;
+  --main-text: #171717;
+  --main-text-muted: #525252;
+  --main-accent: #404040;
+  --main-border: rgba(0, 0, 0, 0.1);
+  --main-card-bg: #f5f5f5;
+  --main-accent-soft: rgba(0, 0, 0, 0.06);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Mulmaru', 'Malgun Gothic', -apple-system, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
 }
 
 body {
@@ -115,6 +121,72 @@ body {
   margin-left: 220px;
   min-height: 100vh;
   padding: 2rem 2.5rem 4rem;
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+
+.main .page-title {
+  color: var(--main-text);
+}
+
+.main .page-desc,
+.main .intro-text,
+.main .notice-text {
+  color: var(--main-text-muted);
+}
+
+.main .notice-list li {
+  background: var(--main-card-bg);
+  border-color: var(--main-border);
+  color: var(--main-text-muted);
+}
+
+.main .notice-list li strong {
+  color: var(--main-text);
+}
+
+.main .portfolio-card {
+  background: var(--main-card-bg);
+  border-color: var(--main-border);
+}
+
+.main .portfolio-card:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
+.main .portfolio-meta p {
+  color: var(--main-text-muted);
+}
+
+.main .portfolio-meta p span {
+  color: var(--main-accent);
+}
+
+.main .portfolio-option {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.main .tip-row {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.main .tip-num {
+  background: var(--main-accent-soft);
+  border-color: var(--main-border);
+  color: var(--main-text);
+}
+
+.main .tip-body h3 {
+  color: var(--main-text);
+}
+
+.main .tip-body p {
+  color: var(--main-text-muted);
+}
+
+.main .tip-row .video-wrap {
+  border-color: var(--main-border);
 }
 
 .page-header {
@@ -125,12 +197,10 @@ body {
   font-size: clamp(1.75rem, 5vw, 2.25rem);
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
 .page-desc {
-  color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -145,7 +215,6 @@ body {
 
 .intro-text,
 .notice-text {
-  color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.75;
   margin-bottom: 1rem;
