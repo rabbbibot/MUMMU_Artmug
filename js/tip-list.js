@@ -1,12 +1,22 @@
 function createTipItem(item, index) {
+  const body = item.html
+    ? item.html
+    : `<p>${item.text || ""}</p>`;
+  const showVideo =
+    Object.prototype.hasOwnProperty.call(item, "youtubeId") || item.video === true;
+  const video = showVideo
+    ? item.youtubeId
+      ? createYoutubeVideo(item.youtubeId)
+      : '<div class="video-wrap video-wrap--empty" aria-hidden="true"></div>'
+    : "";
+
   return `
-    <article class="tip-row">
-      <span class="tip-num">${index + 1}</span>
+    <article class="tip-row${showVideo ? "" : " tip-row--no-video"}">
       <div class="tip-body">
         <h3>${item.title}</h3>
-        <p>${item.text}</p>
+        ${body}
       </div>
-      ${createYoutubeVideo(item.youtubeId)}
+      ${video}
     </article>
   `;
 }

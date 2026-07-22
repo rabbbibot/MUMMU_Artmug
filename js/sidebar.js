@@ -13,23 +13,23 @@
       ]
     },
     {
-      id: "tip",
-      label: "TIP",
-      children: [
-        { id: "tip-model", label: "모델 셋팅", href: "tip-model.html" },
-        { id: "tip-expression", label: "표정 셋팅", href: "tip-expression.html" },
-        { id: "tip-external", label: "외부 프로그램", href: "tip-external.html" },
-        { id: "tip-iphone", label: "아이폰 기능", href: "tip-iphone.html" }
-      ]
-    },
-    {
       id: "model",
-      label: "모델 셋팅",
+      label: "버츄얼 설정",
       children: [
         { id: "model-vtube", label: "Vtube Studio", href: "model-vtube.html" },
         { id: "model-vbridger", label: "Vbridger", href: "model-vbridger.html" },
         { id: "model-expression", label: "표정", href: "model-expression.html" },
         { id: "model-shoost", label: "Shoost", href: "model-shoost.html" }
+      ]
+    },
+    {
+      id: "tip",
+      label: "팁",
+      children: [
+        { id: "tip-model", label: "모델 셋팅", href: "tip-model.html" },
+        { id: "tip-expression", label: "표정 셋팅", href: "tip-expression.html" },
+        { id: "tip-external", label: "외부 프로그램", href: "tip-external.html" },
+        { id: "tip-iphone", label: "아이폰 기능", href: "tip-iphone.html" }
       ]
     }
   ];

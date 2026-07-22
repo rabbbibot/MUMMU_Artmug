@@ -6,24 +6,19 @@ function closeAllDropdowns() {
 
 document.addEventListener("click", (event) => {
   const trigger = event.target.closest(".snb-dropdown-trigger");
-  if (trigger) {
-    event.preventDefault();
-    event.stopPropagation();
+  if (!trigger) return;
 
-    const panel = trigger.closest(".snb-dropdown");
-    if (!panel) return;
+  event.preventDefault();
+  event.stopPropagation();
 
-    if (panel.classList.contains("open")) {
-      panel.classList.remove("open");
-      return;
-    }
+  const panel = trigger.closest(".snb-dropdown");
+  if (!panel) return;
 
-    closeAllDropdowns();
-    panel.classList.add("open");
+  if (panel.classList.contains("open")) {
+    panel.classList.remove("open");
     return;
   }
 
-  if (!event.target.closest(".snb-dropdown")) {
-    closeAllDropdowns();
-  }
+  closeAllDropdowns();
+  panel.classList.add("open");
 });
