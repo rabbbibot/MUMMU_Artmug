@@ -4,13 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="icon.webp" type="image/webp">
+  <link rel="preload" href="fonts/Mulmaru.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="icon.webp" as="image">
   <title>MUMMU 커미션</title>
   <link rel="stylesheet" href="css/mummu-layout.css">
   <link rel="stylesheet" href="css/commission-menu.css">
+  <link rel="stylesheet" href="css/page-motion.css">
 </head>
 <body>
   <div class="layout">
-    <aside class="snb"></aside>
+    <aside class="snb">
+      <div class="snb-profile">
+        <div class="snb-profile-img">
+          <img src="icon.webp" alt="MUMMU" width="72" height="72" decoding="sync">
+        </div>
+      </div>
+      <nav>
+        <a href="index.html" class="active">소개</a>
+        <a href="notice.html">안내사항</a>
+        <div class="snb-dropdown">
+          <span class="snb-dropdown-trigger">포트폴리오</span>
+          <div class="snb-dropdown-menu">
+            <a href="portfolio-female.html">여자</a>
+            <a href="portfolio-male.html">남자</a>
+            <a href="portfolio-other.html">인외</a>
+            <a href="portfolio-sd.html">SD</a>
+          </div>
+        </div>
+        <div class="snb-dropdown">
+          <span class="snb-dropdown-trigger">TIP</span>
+          <div class="snb-dropdown-menu">
+            <a href="tip-model.html">모델 셋팅</a>
+            <a href="tip-expression.html">표정 셋팅</a>
+            <a href="tip-external.html">외부 프로그램</a>
+            <a href="tip-iphone.html">아이폰 기능</a>
+          </div>
+        </div>
+        <div class="snb-dropdown">
+          <span class="snb-dropdown-trigger">모델 셋팅</span>
+          <div class="snb-dropdown-menu">
+            <a href="model-vtube.html">Vtube Studio</a>
+            <a href="model-vbridger.html">Vbridger</a>
+            <a href="model-expression.html">표정</a>
+            <a href="model-shoost.html">Shoost</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
     <main class="main">
       <header class="page-header">
         <h1 class="page-title">소개</h1>
@@ -21,5 +61,6 @@
       </section></main>
   </div>
   <script src="js/commission-menu.js"></script>
+  <script src="js/page-motion.js"></script>
 </body>
 </html>

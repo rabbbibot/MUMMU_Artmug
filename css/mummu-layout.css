@@ -1,5 +1,7 @@
 html {
   color-scheme: dark;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -8,7 +10,7 @@ html {
        url('../fonts/Mulmaru.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 :root {
@@ -35,6 +37,7 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  overflow-x: hidden;
   background-image:
     radial-gradient(ellipse 70% 40% at 50% 0%, rgba(255, 255, 255, 0.03), transparent 60%),
     radial-gradient(ellipse 50% 30% at 100% 80%, rgba(255, 255, 255, 0.02), transparent);
@@ -49,13 +52,14 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 0;
   width: 220px;
+  height: 100vh;
   flex-shrink: 0;
   background: var(--surface);
   border-right: 1px solid var(--border-subtle);
   padding: 1.25rem 0 2rem;
-  overflow-y: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
   z-index: 100;
 }
 
@@ -66,11 +70,13 @@ body {
   padding: 0 1.25rem 1.25rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
 }
 
 .snb-profile-img {
   width: 72px;
   height: 72px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--accent-soft);
   border: 2px solid var(--border-subtle);
@@ -109,6 +115,7 @@ body {
   margin-left: 220px;
   min-height: 100vh;
   padding: 2rem 2.5rem 4rem;
+  overflow-x: hidden;
 }
 
 .page-header {

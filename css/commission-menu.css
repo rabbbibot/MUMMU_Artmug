@@ -20,7 +20,6 @@
   text-decoration: none;
   font-size: 0.95rem;
   line-height: 1.35;
-  transition: color 0.2s, background 0.2s;
 }
 
 .snb nav > a:hover,
@@ -42,22 +41,15 @@ html[data-theme="light"] .snb-dropdown-trigger:hover {
 
 .snb-dropdown {
   width: 100%;
-  overflow: visible;
 }
 
 .snb-dropdown-menu {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.25s ease;
+  display: none;
   background: rgba(0, 0, 0, 0.2);
 }
 
-.snb-dropdown:hover .snb-dropdown-menu {
-  max-height: 0 !important;
-}
-
 .snb-dropdown.open .snb-dropdown-menu {
-  max-height: 360px !important;
+  display: block;
 }
 
 .snb-dropdown.open .snb-dropdown-trigger {
@@ -79,7 +71,6 @@ html[data-theme="light"] .snb-dropdown-trigger:hover {
   font-size: 0.9rem;
   line-height: 1.35;
   border-left: 2px solid transparent;
-  transition: color 0.2s, background 0.2s;
 }
 
 .snb-dropdown-menu a:hover,
