@@ -12,7 +12,7 @@ html {
   font-family: 'Pretendard';
   font-weight: 45 920;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   src: url('../fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
@@ -40,7 +40,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 body {
