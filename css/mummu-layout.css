@@ -1,14 +1,18 @@
 html {
-  color-scheme: dark;
+  color-scheme: light;
   overflow-x: hidden;
   scrollbar-gutter: stable;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 45 920;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
   src: url('../fonts/PretendardVariable.woff2') format('woff2-variations');
 }
 
@@ -40,13 +44,11 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: #ffffff;
+  color: var(--main-text);
   min-height: 100vh;
   overflow-x: hidden;
-  background-image:
-    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(255, 255, 255, 0.03), transparent 60%),
-    radial-gradient(ellipse 50% 30% at 100% 80%, rgba(255, 255, 255, 0.02), transparent);
+  font-weight: 400;
 }
 
 .layout {
@@ -67,6 +69,7 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
   z-index: 100;
+  color-scheme: dark;
 }
 
 .snb-profile {
@@ -135,14 +138,25 @@ body {
   color: var(--main-text-muted);
 }
 
-.main .notice-list li {
+.main .notice-list .notice-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.main .notice-card .notice-link {
+  border: 1px solid var(--main-border);
   background: var(--main-card-bg);
-  border-color: var(--main-border);
   color: var(--main-text-muted);
 }
 
-.main .notice-list li strong {
+.main .notice-card .notice-link strong {
   color: var(--main-text);
+}
+
+.main .notice-card .notice-link:hover {
+  background: #ebebeb;
 }
 
 .main .portfolio-card {
@@ -225,22 +239,36 @@ body {
   margin-top: 1.5rem;
 }
 
-.notice-list li {
+.notice-card {
+  margin-bottom: 0.75rem;
+}
+
+.notice-link {
+  display: block;
   padding: 1rem 1.25rem;
   background: var(--card-bg);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  margin-bottom: 0.75rem;
   color: var(--text-muted);
   font-size: 0.92rem;
   line-height: 1.65;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
 
-.notice-list li strong {
+.notice-link:hover {
+  background: color-mix(in srgb, var(--card-bg) 88%, #000 12%);
+}
+
+.notice-link strong {
   display: block;
   color: var(--text);
   font-weight: normal;
   margin-bottom: 0.35rem;
+}
+
+.notice-link-desc {
+  display: block;
 }
 
 /* Portfolio grid */

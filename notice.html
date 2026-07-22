@@ -2,6 +2,22 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    @font-face {
+      font-family: 'Pretendard';
+      font-weight: 45 920;
+      font-style: normal;
+      font-display: swap;
+      src: url('fonts/PretendardVariable.woff2') format('woff2-variations');
+    }
+    html, body {
+      background: #fff;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+    }
+    .main { background: #fff; min-height: 100vh; }
+  </style>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="icon.webp" type="image/webp">
   <link rel="preload" href="fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
@@ -61,21 +77,29 @@
           안내문 안내문 안내문 안내문
         </p>
         <ul class="notice-list">
-          <li>
-            <strong>커미션 문의</strong>
-            문의 문의 문의 문의
+          <li class="notice-card">
+            <a href="https://artmug.kr/index.php?channel=view&uid=57443" class="notice-link" target="_blank" rel="noopener noreferrer">
+              <strong>커미션 문의</strong>
+              <span class="notice-link-desc">문의 문의 문의 문의</span>
+            </a>
           </li>
-          <li>
-            <strong>포트폴리오 영상</strong>
-            영상 설명 설명 설명
+          <li class="notice-card">
+            <a href="portfolio-female.html" class="notice-link">
+              <strong>포트폴리오 영상</strong>
+              <span class="notice-link-desc">영상 설명 설명 설명</span>
+            </a>
           </li>
-          <li>
-            <strong>TIP / 모델 셋팅</strong>
-            TIP 설명 설명 설명
+          <li class="notice-card">
+            <a href="tip-model.html" class="notice-link">
+              <strong>TIP / 모델 셋팅</strong>
+              <span class="notice-link-desc">TIP 설명 설명 설명</span>
+            </a>
           </li>
-          <li>
-            <strong>저작권</strong>
-            저작권 설명 설명 설명
+          <li class="notice-card">
+            <a href="model-vtube.html" class="notice-link">
+              <strong>저작권</strong>
+              <span class="notice-link-desc">저작권 설명 설명 설명</span>
+            </a>
           </li>
         </ul>
       </section></main>

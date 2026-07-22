@@ -4,8 +4,9 @@ function closeAllDropdowns() {
   });
 }
 
-document.querySelectorAll(".snb-dropdown-trigger").forEach((trigger) => {
-  trigger.addEventListener("click", (event) => {
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest(".snb-dropdown-trigger");
+  if (trigger) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -19,5 +20,10 @@ document.querySelectorAll(".snb-dropdown-trigger").forEach((trigger) => {
 
     closeAllDropdowns();
     panel.classList.add("open");
-  });
+    return;
+  }
+
+  if (!event.target.closest(".snb-dropdown")) {
+    closeAllDropdowns();
+  }
 });

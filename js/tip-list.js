@@ -11,8 +11,12 @@ function createTipItem(item, index) {
   `;
 }
 
-const list = document.querySelector(".tip-list");
-if (list && window.TIP_ITEMS) {
-  const items = TIP_ITEMS[list.dataset.key] ?? [];
-  list.innerHTML = items.map(createTipItem).join("");
+function initTipList() {
+  const list = document.querySelector(".tip-list");
+  if (list && window.TIP_ITEMS) {
+    const items = TIP_ITEMS[list.dataset.key] ?? [];
+    list.innerHTML = items.map(createTipItem).join("");
+  }
 }
+
+initTipList();

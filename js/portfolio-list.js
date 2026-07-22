@@ -15,8 +15,12 @@ function createPortfolioCard(item) {
   `;
 }
 
-const grid = document.querySelector(".portfolio-grid");
-if (grid && window.PORTFOLIO_ITEMS) {
-  const items = PORTFOLIO_ITEMS[grid.dataset.category] ?? [];
-  grid.innerHTML = items.map(createPortfolioCard).join("");
+function initPortfolioList() {
+  const grid = document.querySelector(".portfolio-grid");
+  if (grid && window.PORTFOLIO_ITEMS) {
+    const items = PORTFOLIO_ITEMS[grid.dataset.category] ?? [];
+    grid.innerHTML = items.map(createPortfolioCard).join("");
+  }
 }
+
+initPortfolioList();
