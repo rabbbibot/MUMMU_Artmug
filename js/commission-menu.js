@@ -35,7 +35,7 @@ const NAV = [
 
 const PROFILE = {
   name: "",
-  logo: "images/mummu-icon.svg"
+  logo: "icon.webp"
 };
 
 function currentPageId() {
